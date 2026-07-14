@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Agent Observability Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <p class="eyebrow">Synthetic observability demo</p>
+        <h1>AI Agent Observability Dashboard</h1>
+        <p>Monitor demo agent runs, tool calls, latency, estimated cost, retries, prompt risks, approval decisions and audit trails.</p>
+      </header>
+      <section class="toolbar">
+        <button id="generateData" type="button">Generate synthetic traces</button>
+        <a href="/trace.html">Open trace view</a>
+      </section>
+      <section id="metrics" class="metrics"></section>
+      <section class="panel">
+        <h2>Recent runs</h2>
+        <div id="runs"></div>
+      </section>
+      <section class="panel">
+        <h2>Risk flags</h2>
+        <div id="risks"></div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

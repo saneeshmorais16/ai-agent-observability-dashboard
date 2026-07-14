@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Trace View</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header>
+        <p class="eyebrow">Trace view</p>
+        <h1>Agent run timeline</h1>
+        <p>Enter a run ID to inspect tool calls, audit events, risk flags and final status.</p>
+      </header>
+      <section class="toolbar">
+        <input id="traceRunId" type="number" min="1" value="1" />
+        <button id="loadTrace" type="button">Load trace</button>
+        <a href="/">Dashboard</a>
+      </section>
+      <section class="panel">
+        <pre id="traceOutput">Generate synthetic traces from the dashboard first.</pre>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
