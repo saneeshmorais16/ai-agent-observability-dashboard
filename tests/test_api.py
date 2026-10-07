@@ -31,3 +31,19 @@ def test_dashboard_endpoint():
     response = client.get("/dashboard")
     assert response.status_code == 200
     assert response.json()["total_agent_runs"] == 3
+
+
+def test_api_rejects_invalid_run_status():
+    response = client.post(
+        "/runs",
+        json={"user_request_summary": "Review synthetic task notes", "agent_name": "api_agent", "status": "maybe"},
+    )
+    assert response.status_code == 422
+
+
+def test_api_rejects_negative_token_counts():
+    response = client.post(
+        "/runs",
+        json={"user_request_summary": "Review synthetic task notes", "agent_name": "api_agent", "prompt_tokens": -1},
+    )
+    assert response.status_code == 422

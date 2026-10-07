@@ -36,6 +36,7 @@ Agent systems can become hard to inspect when planning, tool calls, retries and 
 - Audit logging
 - Dashboard metrics endpoint
 - Trace view endpoint
+- API input validation for statuses, token counts and risk levels
 - Synthetic data generator
 
 ## Agent Observability Architecture
