@@ -1,5 +1,7 @@
 # AI Agent Observability Dashboard
 
+[Verification record](docs/VERIFICATION.md)
+
 A portfolio-ready observability prototype for monitoring AI agent runs, tool calls, latency, cost estimates, errors, retries, prompt risks, approval decisions and audit logs.
 
 ## What This Project Does
